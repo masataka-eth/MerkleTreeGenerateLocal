@@ -27,7 +27,7 @@ Two files are created in the ".interface" folder
 '*proof.json is in a format that can be imported directly into Firestore'
 
 ### Add info
-address + int_data : index1.js
-address + int_data1 + int_data2 : index2.js
+ - address + int_data : index1.js
+ - address + int_data1 + int_data2 : index2.js
 
 That's all.
