@@ -12,6 +12,7 @@
   "dependencies": {
     "arrbuf2hex": "^1.2.1",
     "csv": "^6.2.0",
+    "csv-parse": "^5.3.0",
     "keccak256": "^1.0.6",
     "merkletreejs": "^0.2.32"
   }
