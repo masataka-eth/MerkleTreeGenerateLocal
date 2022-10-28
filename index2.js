@@ -6,11 +6,13 @@ const csv = require('csv');
 
 // read whitelist textdata
 var text = "";
+var saveaddress = new Array();
 var saveint = new Array();
 var saveint2 = new Array();
 fs.createReadStream(".interface/whitelist.txt", 'utf-8')
 .pipe(csv.parse(function(err, data) { 
     data.forEach(element => {
+        saveaddress.push(element[0].toString().toLowerCase());
         saveint.push(element[1].toString());
         let hexcg = ('0000000000000000000000000000000000000000000000000000000000000000'
                      + Number(element[1]).toString(16)).slice(-64);
@@ -44,7 +46,7 @@ fs.createReadStream(".interface/whitelist.txt", 'utf-8')
             proofdata += '0x'+proof + ','
         });
         proofdata = proofdata.slice(0,-1);
-        listdata += '\"' + id + '\"' + 
+        listdata += '\"' + saveaddress[listcnt] + '\"' + 
         ':{\"hexProof\":\"' +  proofdata + '\",' + 
             '\"count1\":' + saveint[listcnt] + ',' + 
             '\"count2\":' + saveint2[listcnt] +  '},'
