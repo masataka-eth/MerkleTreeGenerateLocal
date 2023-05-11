@@ -27,7 +27,10 @@ Two files are created in the ".interface" folder
 '*proof.json is in a format that can be imported directly into Firestore'
 
 ### Add info
- - address + int_data : index1.js
- - address + int_data1 + int_data2 : index2.js
+ - address + uint256_data1 : index1.js
+ - address + uint256_data1 + uint256_data2 : index2.js
+ - address + uint256_data1 + uint248_data2 : index2-1.js
+ - address + uint248_data1 + uint248_data2 : index2-2.js
+ - for hajime001 > mint-site-merke > allowlist : index_for-mint-site-merkle.js
 
 That's all.
